@@ -1,0 +1,17 @@
+{% ckan_extends %}
+
+{% block package_basic_fields_custom %}
+{{ form.input('kdl_project_url', type='url', label=_('Project URL'), id='field-kdl_project_url', placeholder=_('http://example.com/'), value=data.kdl_project_url, error=errors.kdl_project_url) }}
+
+{{ form.markdown('kdl_project_pi', label=_('Project principal and co-investigators'), id='field-kdl_project_pi', placeholder=_('Names of PIs and Co-Is, one per line'), value=data.kdl_project_pi, error=errors.kdl_project_pi) }}
+
+{{ form.markdown('kdl_project_team', label=_('Project team'), id='field-kdl_project_team', placeholder=_('Names, one per line'), value=data.kdl_project_team, error=errors.kdl_project_team) }}
+
+{{ form.input('kdl_project_start_date', type='date', label=_('Project start date'), id='field-kdl_project_start_date', value=data.kdl_project_start_date, error=errors.kdl_project_start_date) }}
+
+{{ form.input('kdl_project_end_date', type='date', label=_('Project end date'), id='field-kdl_project_end_date', value=data.kdl_project_end_date, error=errors.kdl_project_end_date) }}
+
+{{ form.markdown('kdl_project_funder', label=_('Project funder'), id='field-kdl_project_funder', placeholder=_('Names, one per line'), value=data.kdl_project_funder, error=errors.kdl_project_funder) }}
+
+{{ form.markdown('kdl_project_citation', label=_('Citation information'), id='field-kdl_project_citation', placeholder=_('eg. Could contain format of CKAN reference for resource been used as well as any other text extracted form project website documentation when available'), value=data.kdl_project_citation, error=errors.kdl_project_citation) }}
+{% endblock %}

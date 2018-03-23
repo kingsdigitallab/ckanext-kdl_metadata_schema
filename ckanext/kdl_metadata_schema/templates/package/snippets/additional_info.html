@@ -1,0 +1,60 @@
+{% ckan_extends %}
+
+{% block extras %}
+{% if pkg_dict.kdl_project_url %}
+<tr>
+  <th scope="row" class="dataset-label">{{ _('Project URL') }}</th>
+  <td class="dataset-details">
+    <a href="{{ pkg_dict.kdl_project_url }}" target="{{ pkg_dict.title }}">{{ pkg_dict.kdl_project_url }}</a>
+</td>
+</tr>
+{% endif %}
+
+{% if pkg_dict.kdl_project_pi %}
+<tr>
+  <th scope="row" class="dataset-label">{{ _('Project principal and co-investigators') }}</th>
+  <td class="dataset-details">{{ h.render_markdown(pkg_dict.kdl_project_pi) }}</td>
+</tr>
+{% endif %}
+
+{% if pkg_dict.kdl_project_team %}
+<tr>
+  <th scope="row" class="dataset-label">{{ _('Project team') }}</th>
+  <td class="dataset-details">{{ h.render_markdown(pkg_dict.kdl_project_team) }}</td>
+</tr>
+{% endif %}
+
+{% if pkg_dict.kdl_project_start_date %}
+<tr>
+  <th scope="row" class="dataset-label">{{ _('Project start date') }}</th>
+  <td class="dataset-details">{{ pkg_dict.kdl_project_start_date }}</td>
+</tr>
+{% endif %}
+
+{% if pkg_dict.kdl_project_end_date %}
+<tr>
+  <th scope="row" class="dataset-label">{{ _('Project end date') }}</th>
+  <td class="dataset-details">{{ pkg_dict.kdl_project_end_date }}</td>
+</tr>
+{% endif %}
+
+{% if pkg_dict.kdl_project_status %}
+<tr>
+  <th scope="row" class="dataset-label">{{ _('Project status') }}</th>
+  <td class="dataset-details">{{ pkg_dict.kdl_project_status.0 }}</td>
+</tr>
+{% endif %}
+
+{% if pkg_dict.kdl_project_funder %}
+<tr>
+  <th scope="row" class="dataset-label">{{ _('Project funder') }}</th>
+  <td class="dataset-details">{{ h.render_markdown(pkg_dict.kdl_project_funder) }}</td>
+</tr>
+
+{% if pkg_dict.kdl_project_citation %}
+<tr>
+  <th scope="row" class="dataset-label">{{ _('Project funder') }}</th>
+  <td class="dataset-details">{{ h.render_markdown(pkg_dict.kdl_project_citation) }}</td>
+</tr>
+{% endif %}
+{% endblock %}

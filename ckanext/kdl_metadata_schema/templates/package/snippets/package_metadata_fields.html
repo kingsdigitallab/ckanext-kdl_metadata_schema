@@ -1,0 +1,20 @@
+{% ckan_extends %}
+
+{% block package_metadata_fields %}
+
+<div class="control-group">
+    <label class="control-label" for="field-kdl_project_status">{{ _('Project status') }}</label>
+    <div class="controls">
+      <select id="field-kdl_project_status" name="kdl_project_status" data-module="autocomplete">
+        {% for kdl_project_status in h.kdl_project_status()  %}
+        <option value="{{ kdl_project_status }}" {% if kdl_project_status in data.get('kdl_project_status', []) %}selected="selected"{% endif %}>
+            {{ kdl_project_status }}
+        </option>
+        {% endfor %}
+    </select>
+</div>
+</div>
+
+{{ super() }}
+
+{% endblock %}

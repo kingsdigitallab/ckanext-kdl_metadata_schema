@@ -80,7 +80,7 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
         [ckan.plugins]
-        kdl_metadata_schema=ckanext.kdl_metadata_schema.plugin:Kdl_Metadata_SchemaPlugin
+        kdl_metadata_schema=ckanext.kdl_metadata_schema.plugin:KDLMetadataSchemaPlugin
 
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
