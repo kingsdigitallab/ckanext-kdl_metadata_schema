@@ -1,0 +1,4 @@
+include README.rst
+include LICENSE
+include requirements.txt
+recursive-include ckanext/kdl_metadata_schema *.html *.json *.js *.less *.css *.mo
