@@ -50,6 +50,7 @@
   <th scope="row" class="dataset-label">{{ _('Project funder') }}</th>
   <td class="dataset-details">{{ h.render_markdown(pkg_dict.kdl_project_funder) }}</td>
 </tr>
+{% endif %}
 
 {% if pkg_dict.kdl_project_citation %}
 <tr>
